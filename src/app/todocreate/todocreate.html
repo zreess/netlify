@@ -1,0 +1,14 @@
+<p>todocreate works!</p>
+
+<br>
+<br>
+<hr>
+
+
+<form #myform="ngForm" (ngSubmit)="create(myform.value)">
+    <label for="">Title</label>
+    <input type="text" name="title" ngModel #title=ngModel required> <br>
+
+    <input type="submit" value="SUBMIT" [disabled]="myform.invalid">
+
+</form>

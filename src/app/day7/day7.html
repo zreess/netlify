@@ -1,0 +1,28 @@
+<p>day7 works!</p>
+
+
+<br>
+<h1>TODO VIEW TABLE</h1>
+
+<br>
+
+<table class="table table-bordered">
+    <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Completed</th>
+    </thead>
+    <tbody>
+        @for (todo of mydata ; track todo.id)
+        {
+            <tr>
+                <td> {{ todo.id }}</td>
+                <td> {{ todo.title }}</td>
+                <td> {{ todo.completed ? 'yes' :'no' }}</td>
+                <td><button class="btn btn-danger" (click)="deleteTodo(todo.id)">delete</button></td>
+                <td><button class="btn btn-success" (click)="editTodo(todo.id)">edit</button></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
